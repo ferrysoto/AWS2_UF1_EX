@@ -4,11 +4,41 @@
   <head>
     <meta charset="utf-8">
     <title>Selector de skins - Ferran H</title>
-    <link rel="stylesheet" href="/Ex3_Skins.css/ex3.css">
+    <link rel="stylesheet" href="/Ex3_Skins.css/ex3_default.css">
   </head>
   <body>
-      <h1>Hola mundo!</h1>
-      <p>Este es el ejercicio 3 sobre lectura de directorios realizado por Ferran Herrero.</p>
+    <div style="width: 100%; padding: 15px;">
+      <div style="float: left;">
+        <h1>Hola mundo!</h1>
+      </div>
+
+      <div style="float: right">
+
+        <form style="padding-top: 10px; padding-right: 35px;" method="post">
+          <label>Elige una skin: </label>
+          <select name="selectSkin">
+            <option value="ex3_default.css">Skin default</option>
+            <option value="ex3_v1.css">Skin 1</option>
+            <option value="ex3_v2.css">Skin 2</option>
+          </select>
+          <input type="submit">
+        </form>
+
+        <?php
+          if (!empty($_POST)) {
+            $skin = $_POST["selectSkin"];
+          } else {
+            $skin = "ex3_default.css";
+          }
+        ?>
+
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="/Ex3_Skins.css/<?php echo $skin ?>">
+    <p>Este es el ejercicio 3 sobre lectura de directorios realizado por Ferran Herrero.</p>
+    <br>
+    <strong>Skin seleccionada: <?php echo $skin ?></strong>
 
   </body>
 </html>

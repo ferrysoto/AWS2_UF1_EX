@@ -1,0 +1,20 @@
+/* Ejercicio 3 forms - Ferran Herrero 26/09/2019 */
+h1 {
+  margin: 45px;
+  color: white;
+}
+
+body {
+  background-color: blue;
+  padding: 2%;
+}
+
+p {
+  float: right;
+  color: pink;
+  margin: 25px;
+}
+
+strong {
+  color: white;
+}
